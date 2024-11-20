@@ -182,7 +182,8 @@
       padding: 8px;
     }
 
-    &-item {
+    & > a,
+    & > b {
       flex: 0 0 auto;
       display: flex;
       justify-content: center;
@@ -206,11 +207,11 @@
         font-size: 14px;
         line-height: 19px;
       }
+    }
 
-      &.active {
-        background-color: #7474e2;
-        color: #ffffff;
-      }
+    & > b {
+      background-color: #7474e2;
+      color: #ffffff;
     }
   }
 }

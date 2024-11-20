@@ -664,7 +664,7 @@ img {
     padding: 8px;
   }
 }
-.news__breadcrumbs-item {
+.news__breadcrumbs > a, .news__breadcrumbs > b {
   flex: 0 0 auto;
   display: flex;
   justify-content: center;
@@ -684,14 +684,14 @@ img {
   transition-duration: 0.2s;
 }
 @media (max-width: 768px) {
-  .news__breadcrumbs-item {
+  .news__breadcrumbs > a, .news__breadcrumbs > b {
     min-width: 28px;
     padding: 4px 2px;
     font-size: 14px;
     line-height: 19px;
   }
 }
-.news__breadcrumbs-item.active {
+.news__breadcrumbs > b {
   background-color: #7474e2;
   color: #ffffff;
 }
