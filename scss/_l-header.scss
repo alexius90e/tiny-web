@@ -1,8 +1,9 @@
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 200;
   padding: 28px 0;
 
   @include tablet {
@@ -36,7 +37,7 @@
         max-width: 100%;
         height: auto;
 
-        @include tablet {
+        @include mobile {
           width: 99px;
         }
       }
@@ -148,6 +149,9 @@
     @include tablet {
       flex: 1 1 auto;
       justify-content: flex-end;
+    }
+
+    @include mobile {
       gap: 10px;
     }
 
@@ -159,10 +163,15 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      transition: filter ease-in-out 0.2s;
 
-      @include tablet {
+      @include mobile {
         height: 24px;
         width: 24px;
+      }
+
+      &:hover {
+        filter: brightness(1.2);
       }
 
       &_tg {
@@ -185,13 +194,18 @@
 
     &-button {
       display: block;
-      height: 24px;
-      width: 24px;
+      height: 30px;
+      width: 30px;
       padding: 0;
       border: none;
       outline: none;
       background: url(../assets/menu.svg) center / cover no-repeat;
       cursor: pointer;
+
+      @include mobile {
+        height: 24px;
+        width: 24px;
+      }
     }
   }
 }

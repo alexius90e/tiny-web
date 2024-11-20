@@ -8,9 +8,17 @@
     min-height: 100dvh;
   }
 
+  @include laptop {
+    min-height: auto;
+  }
+
   & .container {
     position: relative;
     padding-top: 285px;
+
+    @include laptop {
+      padding-bottom: 285px;
+    }
 
     @include tablet {
       padding-top: 92px;
@@ -67,17 +75,21 @@
       border: none;
       border-radius: 6px;
       background-color: #7474e2;
-      transition: background-color ease-in-out 0.2s;
+      transition: filter ease-in-out 0.2s;
+      cursor: pointer;
+
+      @include tablet {
+        width: 100%;
+      }
 
       @include mobile {
-        width: 100%;
         padding: 12px 36px;
         font-size: 16px;
         line-height: 22px;
       }
 
       &:hover {
-        background-color: #6060c3;
+        filter: brightness(1.2);
       }
 
       &::after {
