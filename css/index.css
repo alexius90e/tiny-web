@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+html {
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: #181d42;
+  background-color: #f4f3ff;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Manrope", sans-serif;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 0;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 0;
+  }
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .header .container {
+    gap: 26px;
+  }
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logo-link-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .header__logo-link-image {
+    width: 99px;
+  }
+}
+.header__nav {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 100%;
+}
+@media (max-width: 768px) {
+  .header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: all;
+  }
+}
+.header__nav-wrapper {
+  transition: transform ease-in-out 0.2s;
+}
+@media (max-width: 768px) {
+  .header__nav-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 240px;
+    width: 100%;
+    padding: 62px 20px 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transform: translate3d(120vw, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  .active .header__nav-wrapper {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.header__nav-close {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  height: 16px;
+  width: 16px;
+  background: url(../assets/close.svg) center/cover no-repeat;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .header__nav-close {
+    display: block;
+  }
+}
+.header__nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+@media (max-width: 768px) {
+  .header__nav-menu {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+.header__nav-menu-item-link {
+  display: inline-block;
+  padding: 8px 15px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #475880;
+  transition: color ease-in-out 0.2s;
+}
+@media (max-width: 768px) {
+  .header__nav-menu-item-link {
+    padding: 0;
+  }
+}
+.header__nav-menu-item-link:hover {
+  color: #7474e2;
+}
+.header__social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  .header__social {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}
+.header__social-link {
+  flex: 0 0 auto;
+  display: block;
+  height: 35px;
+  width: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .header__social-link {
+    height: 24px;
+    width: 24px;
+  }
+}
+.header__social-link_tg {
+  background-image: url(../assets/telegram.svg);
+}
+.header__social-link_vk {
+  background-image: url(../assets/vk.svg);
+}
+.header__burger {
+  flex: 0 0 auto;
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__burger {
+    display: block;
+  }
+}
+.header__burger-button {
+  display: block;
+  height: 24px;
+  width: 24px;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: url(../assets/menu.svg) center/cover no-repeat;
+  cursor: pointer;
+}

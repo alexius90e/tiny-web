@@ -1,0 +1,197 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 0;
+
+  @include tablet {
+    padding: 16px 0;
+  }
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    @include tablet {
+      gap: 26px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+
+        @include tablet {
+          width: 99px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 100%;
+
+    @include tablet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 200;
+      overflow: hidden;
+      background-color: rgba($color: #000000, $alpha: 0);
+      pointer-events: none;
+    }
+
+    &.active {
+      @include tablet {
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        pointer-events: all;
+      }
+    }
+
+    &-wrapper {
+      transition: transform ease-in-out 0.2s;
+
+      @include tablet {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 240px;
+        width: 100%;
+        padding: 62px 20px 20px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        transform: translate3d(120vw, 0, 0);
+      }
+
+      .active & {
+        @include tablet {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+
+    &-close {
+      display: none;
+      position: absolute;
+      top: 24px;
+      right: 20px;
+      height: 16px;
+      width: 16px;
+      background: url(../assets/close.svg) center / cover no-repeat;
+      cursor: pointer;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
+    &-menu {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      @include tablet {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      &-item {
+        &-link {
+          display: inline-block;
+          padding: 8px 15px;
+          font-weight: 600;
+          font-size: 16px;
+          color: #475880;
+          transition: color ease-in-out 0.2s;
+
+          @include tablet {
+            padding: 0;
+          }
+
+          &:hover {
+            color: #7474e2;
+          }
+        }
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @include tablet {
+      flex: 1 1 auto;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    &-link {
+      flex: 0 0 auto;
+      display: block;
+      height: 35px;
+      width: 35px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @include tablet {
+        height: 24px;
+        width: 24px;
+      }
+
+      &_tg {
+        background-image: url(../assets/telegram.svg);
+      }
+
+      &_vk {
+        background-image: url(../assets/vk.svg);
+      }
+    }
+  }
+
+  &__burger {
+    flex: 0 0 auto;
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+    &-button {
+      display: block;
+      height: 24px;
+      width: 24px;
+      padding: 0;
+      border: none;
+      outline: none;
+      background: url(../assets/menu.svg) center / cover no-repeat;
+      cursor: pointer;
+    }
+  }
+}
