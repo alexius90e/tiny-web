@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TinyWEB</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a class="header__logo-link" href="./">
+            <img class="header__logo-link-image" src="./assets/logo.svg" alt="" />
+          </a>
+        </div>
+
+        <nav class="header__nav">
+          <div class="header__nav-wrapper">
+            <ul class="header__nav-menu">
+              <li class="header__nav-menu-item">
+                <a class="header__nav-menu-item-link" href="./">Главная</a>
+              </li>
+              <li class="header__nav-menu-item">
+                <a class="header__nav-menu-item-link" href="#">Скачать</a>
+              </li>
+            </ul>
+
+            <div class="header__nav-close"></div>
+          </div>
+        </nav>
+
+        <div class="header__social">
+          <a class="header__social-link header__social-link_tg" href="#"></a>
+          <a class="header__social-link header__social-link_vk" href="#"></a>
+        </div>
+
+        <div class="header__burger">
+          <button class="header__burger-button"></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="news-details">
+        <div class="container">
+          <h2 class="news-details__title">TinyWEB 0.4 Alpha</h2>
+
+          <div class="news-details__info">
+            <div class="news-details__info-item news-details__info-item_date">04.08.2024</div>
+            <div class="news-details__info-item news-details__info-item_category">Документация</div>
+            <div class="news-details__info-item news-details__info-item_author">Админ</div>
+          </div>
+
+          <h3 class="news-details__subtitle">Добавлено:</h3>
+
+          <ul class="news-details__list">
+            <li class="news-details__list-item">Плавающая панель для форматирования текста.</li>
+            <li class="news-details__list-item">
+              Добавлена постраничная навигация по списку изображений в админ-панели.
+            </li>
+          </ul>
+
+          <h3 class="news-details__subtitle">Изменено:</h3>
+
+          <ul class="news-details__list">
+            <li class="news-details__list-item">
+              Сделан редизайн вывода списка изображений в админ-панели.
+            </li>
+            <li class="news-details__list-item">Сделан редизайн панели категорий</li>
+            <li class="news-details__list-item">
+              Редактор категорий теперь открывается отдельно от списка категорий.
+            </li>
+          </ul>
+
+          <h3 class="news-details__subtitle">Улучшено:</h3>
+
+          <ul class="news-details__list">
+            <li class="news-details__list-item">Улучшен алгоритм счётчика постов для категорий.</li>
+            <li class="news-details__list-item">
+              Библиотека JQuery больше не используется. Вместо неё будет развиваться своя JS
+              библиотека функций.
+            </li>
+            <li class="news-details__list-item">Чистка JS-кода.</li>
+          </ul>
+
+          <h3 class="news-details__subtitle">Исправлено:</h3>
+
+          <ul class="news-details__list">
+            <li class="news-details__list-item">
+              Заголовка поста некорректно фильтровался от недопустимых символов.
+            </li>
+            <li class="news-details__list-item">Множество различных исправлений и улучшений.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logo">
+          <a class="footer__logo-link" href="#">
+            <img class="footer__logo-link-image" src="./assets/logo.svg" alt="" />
+          </a>
+        </div>
+
+        <div class="footer__social">
+          <a class="footer__social-link footer__social-link_tg" href="#"></a>
+          <a class="footer__social-link footer__social-link_vk" href="#"></a>
+        </div>
+
+        <div class="footer__copyright">© Sergey Kapustin 2024 | All rights reserved</div>
+      </div>
+    </footer>
+  </body>
+</html>
