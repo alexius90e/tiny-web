@@ -1,2 +1,92 @@
 .footer {
+  padding: 60px 0;
+
+  @include mobile {
+    padding: 30px 0;
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    margin: 0 0 30px;
+
+    @include mobile {
+      margin: 0 0 20px;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-image {
+        display: block;
+        max-width: 280px;
+        width: 280px;
+        height: auto;
+
+        @include mobile {
+          width: 144px;
+        }
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 40px;
+
+    @include mobile {
+      gap: 10px;
+      margin: 0 0 20px;
+    }
+
+    &-link {
+      flex: 0 0 auto;
+      display: block;
+      height: 50px;
+      width: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: filter ease-in-out 0.2s;
+
+      @include mobile {
+        height: 28px;
+        width: 28px;
+      }
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+
+      &_tg {
+        background-image: url(../assets/telegram.svg);
+      }
+
+      &_vk {
+        background-image: url(../assets/vk.svg);
+      }
+    }
+  }
+
+  &__copyright {
+    font-weight: 500;
+    font-size: 18px;
+    color: #475880;
+
+    @include mobile {
+      font-size: 10px;
+    }
+  }
 }
