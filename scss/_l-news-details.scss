@@ -1,5 +1,10 @@
 .news-details {
   padding: 157px 0 60px;
+  background: url(../assets/news-details-bg.svg) center right -2px / 1240px no-repeat;
+
+  @include desktop {
+    background-size: auto 80vh;
+  }
 
   & .container {
     & > * {

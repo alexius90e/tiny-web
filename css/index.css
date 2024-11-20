@@ -698,6 +698,12 @@ img {
 
 .news-details {
   padding: 157px 0 60px;
+  background: url(../assets/news-details-bg.svg) center right -2px/1240px no-repeat;
+}
+@media (max-width: 1400px) {
+  .news-details {
+    background-size: auto 80vh;
+  }
 }
 .news-details .container > *:last-child {
   margin-bottom: 0;
