@@ -1,0 +1,129 @@
+.first-screen {
+  min-height: 940px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: url(../assets/first-screen-bg.svg) top -24px right -2px no-repeat;
+
+  @media screen and (max-width: 1920px) {
+    min-height: 100dvh;
+  }
+
+  & .container {
+    position: relative;
+    padding-top: 285px;
+
+    @include tablet {
+      padding-top: 92px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    max-width: 640px;
+
+    @include tablet {
+      max-width: none;
+      margin: 0 0 10px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 50px;
+    font-weight: 500;
+    font-size: 46px;
+    color: #475880;
+
+    @include laptop {
+      margin: 0 0 30px;
+      font-size: 40px;
+    }
+
+    @include tablet {
+      max-width: none;
+      margin: 0 0 30px;
+      font-size: 36px;
+    }
+
+    @include mobile {
+      margin: 0 0 20px;
+      font-size: 28px;
+    }
+  }
+
+  &__download {
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 15px 36px;
+      box-sizing: border-box;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 30px;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      background-color: #7474e2;
+      transition: background-color ease-in-out 0.2s;
+
+      @include mobile {
+        width: 100%;
+        padding: 12px 36px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      &:hover {
+        background-color: #6060c3;
+      }
+
+      &::after {
+        content: '';
+        flex: 0 0 auto;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url(../assets/download.svg) center / cover no-repeat;
+
+        @include mobile {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  &__figure {
+    position: absolute;
+    top: 120px;
+    left: 547px;
+
+    @include laptop {
+      left: 320px;
+    }
+
+    @include tablet {
+      position: static;
+      margin: 0 -20px;
+    }
+
+    &-image {
+      display: block;
+      max-width: 1020px;
+      height: auto;
+
+      @include tablet {
+        max-width: 100%;
+      }
+
+      @include mobile {
+        width: 100%;
+        height: 345px;
+        object-fit: cover;
+      }
+    }
+  }
+}
