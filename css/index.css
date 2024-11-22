@@ -489,7 +489,7 @@ img {
 .news__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 85px;
 }
 @media (max-width: 768px) {
   .news__wrapper {
@@ -497,14 +497,15 @@ img {
   }
 }
 .news__card {
-  padding: 60px 70px;
+  padding: 0 35px;
   border-radius: 9px;
-  box-shadow: 0 4px 42px rgba(0, 0, 0, 0.04);
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0);
 }
 @media (max-width: 768px) {
   .news__card {
     padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 42px rgba(0, 0, 0, 0.04);
   }
 }
 .news__card-title {
@@ -640,7 +641,7 @@ img {
   gap: 6px;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 15px auto 0;
+  margin: 40px auto 0;
   padding: 10px;
   border-radius: 6px;
   box-shadow: 0 4px 42px 0 rgba(18, 18, 18, 0.04);
