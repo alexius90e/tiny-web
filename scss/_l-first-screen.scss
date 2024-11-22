@@ -29,7 +29,7 @@
   &__content {
     position: relative;
     z-index: 10;
-    max-width: 640px;
+    max-width: 380px;
 
     @include tablet {
       max-width: none;
@@ -38,25 +38,15 @@
   }
 
   &__title {
-    margin: 0 0 50px;
+    margin: 0 0 25px;
     font-weight: 500;
-    font-size: 46px;
+    font-size: 28px;
     color: #475880;
-
-    @include laptop {
-      margin: 0 0 30px;
-      font-size: 40px;
-    }
 
     @include tablet {
       max-width: none;
-      margin: 0 0 30px;
-      font-size: 36px;
-    }
-
-    @include mobile {
       margin: 0 0 20px;
-      font-size: 28px;
+      font-size: 26px;
     }
   }
 
@@ -111,7 +101,7 @@
   &__figure {
     position: absolute;
     top: 120px;
-    left: 547px;
+    left: 360px;
 
     @include laptop {
       left: 320px;
