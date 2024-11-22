@@ -1,0 +1,96 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 160px 0 85px;
+  box-sizing: border-box;
+
+  @include tablet {
+    padding: 90px 0 55px;
+  }
+
+  &__figure {
+    display: flex;
+    justify-content: center;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+      @include desktop {
+        width: 600px;
+      }
+
+      @include laptop {
+        width: 520px;
+      }
+
+      @include tablet {
+        width: 480px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 25px;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    color: #7474e2;
+
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+
+  &__back {
+    display: flex;
+    justify-content: center;
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 15px 36px;
+      box-sizing: border-box;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 30px;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      background-color: #7474e2;
+      transition: filter ease-in-out 0.2s;
+      cursor: pointer;
+
+      @include mobile {
+        width: 100%;
+        padding: 12px 36px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+
+      &::after {
+        content: '';
+        flex: 0 0 auto;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url(../assets/arrow-circle-left.svg) center / cover no-repeat;
+
+        @include mobile {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}

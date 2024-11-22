@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 html {
   font-size: 16px;
   font-family: "Manrope", sans-serif;
@@ -897,5 +898,102 @@ img {
   .news-details__list-item::before {
     width: 6px;
     height: 6px;
+  }
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 160px 0 85px;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .not-found {
+    padding: 90px 0 55px;
+  }
+}
+.not-found__figure {
+  display: flex;
+  justify-content: center;
+}
+.not-found__figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 1400px) {
+  .not-found__figure-image {
+    width: 600px;
+  }
+}
+@media (max-width: 992px) {
+  .not-found__figure-image {
+    width: 520px;
+  }
+}
+@media (max-width: 768px) {
+  .not-found__figure-image {
+    width: 480px;
+  }
+}
+.not-found__title {
+  margin: 0 0 25px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  text-align: center;
+  color: #7474e2;
+}
+@media (max-width: 576px) {
+  .not-found__title {
+    font-size: 26px;
+  }
+}
+.not-found__back {
+  display: flex;
+  justify-content: center;
+}
+.not-found__back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 15px 36px;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  background-color: #7474e2;
+  transition: filter ease-in-out 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .not-found__back-button {
+    width: 100%;
+    padding: 12px 36px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.not-found__back-button:hover {
+  filter: brightness(1.2);
+}
+.not-found__back-button::after {
+  content: "";
+  flex: 0 0 auto;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../assets/arrow-circle-left.svg) center/cover no-repeat;
+}
+@media (max-width: 576px) {
+  .not-found__back-button::after {
+    width: 16px;
+    height: 16px;
   }
 }
