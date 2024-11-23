@@ -11,6 +11,12 @@
     padding: 30px 0;
   }
 
+  @include mobile {
+    background-image: url(../assets/news-bg-sm.svg);
+    background-position: top center;
+    background-size: 500px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
