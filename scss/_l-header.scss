@@ -35,7 +35,8 @@
 
       &-image {
         display: block;
-        max-width: 100%;
+        max-width: 112px;
+        width: 112px;
         height: auto;
 
         @include mobile {
@@ -110,7 +111,7 @@
     &-menu {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 35px;
       margin: 0;
       padding: 0;
       list-style-type: none;
@@ -124,7 +125,7 @@
       &-item {
         &-link {
           display: inline-block;
-          padding: 7px 15px;
+          padding: 0;
           font-weight: 600;
           font-size: 16px;
           line-height: 21px;
@@ -160,8 +161,8 @@
     &-link {
       flex: 0 0 auto;
       display: block;
-      height: 35px;
-      width: 35px;
+      height: 30px;
+      width: 30px;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
