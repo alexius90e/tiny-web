@@ -3,6 +3,7 @@
   box-sizing: border-box;
   overflow: hidden;
   background: url(../assets/first-screen-bg.svg) top -24px right -2px no-repeat;
+  background-size: 1200px;
 
   @include laptop {
     min-height: auto;

@@ -339,6 +339,7 @@ img {
   box-sizing: border-box;
   overflow: hidden;
   background: url(../assets/first-screen-bg.svg) top -24px right -2px no-repeat;
+  background-size: 1200px;
 }
 @media (max-width: 992px) {
   .first-screen {
