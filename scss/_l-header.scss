@@ -4,11 +4,11 @@
   left: 0;
   right: 0;
   z-index: 200;
-  padding: 28px 0;
+  padding: 20px 0;
   background-color: #f4f3ff;
 
   @include tablet {
-    padding: 16px 0;
+    padding: 15px 0;
   }
 
   & .container {
@@ -124,9 +124,10 @@
       &-item {
         &-link {
           display: inline-block;
-          padding: 8px 15px;
+          padding: 7px 15px;
           font-weight: 600;
           font-size: 16px;
+          line-height: 21px;
           color: #475880;
           transition: color ease-in-out 0.2s;
 

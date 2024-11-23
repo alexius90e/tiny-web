@@ -1,12 +1,8 @@
 .first-screen {
-  min-height: 940px;
+  min-height: 668px;
   box-sizing: border-box;
   overflow: hidden;
   background: url(../assets/first-screen-bg.svg) top -24px right -2px no-repeat;
-
-  @media screen and (max-width: 1920px) {
-    min-height: 100dvh;
-  }
 
   @include laptop {
     min-height: auto;
@@ -14,11 +10,7 @@
 
   & .container {
     position: relative;
-    padding-top: 285px;
-
-    @include laptop {
-      padding-bottom: 285px;
-    }
+    padding-top: 249px;
 
     @include tablet {
       padding-top: 92px;
@@ -100,8 +92,8 @@
 
   &__figure {
     position: absolute;
-    top: 120px;
-    left: 360px;
+    top: 87px;
+    left: 252px;
 
     @include laptop {
       left: 320px;
